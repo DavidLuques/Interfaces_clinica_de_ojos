@@ -10,48 +10,68 @@
 
 <body>
     <div id="navbar-container"></div>
-    <main class="container my-5">
-        <h2 class="text-center mb-4">Contacto</h2>
-
+    <div class="container my-5">
         <div class="row g-4">
+
             <div class="col-md-6">
-                <form id="formContacto" class="bg-light p-4 rounded shadow-sm">
+                <form id="contactoForm" class="p-4 rounded shadow bg-light h-100">
+                    <h2 class="mb-4">Formulario de Contacto</h2>
+
                     <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" required />
+                        <label for="nombreContacto" class="form-label">Nombre</label>
+                        <input type="text" id="nombreContacto" class="form-control" required />
+                        <div class="invalid-feedback">Por favor, ingresá tu nombre.</div>
                     </div>
+
                     <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" required />
+                        <label for="emailContacto" class="form-label">Email</label>
+                        <input type="email" id="emailContacto" class="form-control" required />
+                        <div class="invalid-feedback">Ingresá un email válido.</div>
                     </div>
+
                     <div class="mb-3">
-                        <label for="mensaje" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                        <label for="asuntoContacto" class="form-label">Asunto</label>
+                        <input type="text" id="asuntoContacto" class="form-control" required />
+                        <div class="invalid-feedback">El asunto no puede estar vacío.</div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+
+                    <div class="mb-3">
+                        <label for="mensajeContacto" class="form-label">Mensaje</label>
+                        <textarea id="mensajeContacto" rows="5" class="form-control" required></textarea>
+                        <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
                 </form>
-            </div>
 
-            <div class="col-md-6">
-                <div class="bg-white p-4 rounded shadow-sm h-100">
-                    <h5 class="mb-3">Información de contacto</h5>
-                    <p><i class="bi bi-geo-alt-fill me-2"></i>Av. Siempreviva 742, Springfield</p>
-                    <p><i class="bi bi-telephone-fill me-2"></i>+54 11 5555-5555</p>
-                    <p><i class="bi bi-envelope-fill me-2"></i>contacto@clinicaojos.com</p>
-
-                    <hr />
-
-                    <h6 class="mb-2">Horarios de atención</h6>
-                    <p class="mb-1">Lunes a Viernes: 9:00 a 18:00</p>
-                    <p>Sábados: 9:00 a 13:00</p>
-
-                    <hr />
-
-                    <iframe src="https://maps.google.com/maps?q=Av.%20Siempreviva%20742&t=&z=15&ie=UTF8&iwloc=&output=embed" class="w-100 rounded" height="200" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+                <div class="mt-4 text-center" id="pantallaFinalContacto" style="display: none;">
+                    <div class="p-4 bg-success text-white rounded shadow">
+                        <h2>✅ Mensaje enviado</h2>
+                        <p id="detalleFinalContacto" class="mt-3 fs-5"></p>
+                        <button class="btn btn-light mt-4" onclick="location.reload()">Enviar otro mensaje</button>
+                    </div>
                 </div>
             </div>
+
+            <div class="col-md-6">
+                <div class="p-4 bg-light rounded shadow h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h4 class="mb-3">Información de contacto</h4>
+                        <p><i class="bi bi-geo-alt-fill"></i> <strong>Dirección:</strong> Av. Siempreviva 742, Springfield</p>
+                        <p><i class="bi bi-telephone-fill"></i> <strong>Teléfono:</strong> +54 11 5555-5555</p>
+                        <p><i class="bi bi-envelope-fill"></i> <strong>Email:</strong> contacto@clinicaojos.com</p>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="mb-2">Ubicación en el mapa</h5>
+                        <iframe src="https://maps.google.com/maps?q=Av.%20Siempreviva%20742&t=&z=15&ie=UTF8&iwloc=&output=embed" class="w-100 rounded" height="250" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </main>
+    </div>
+
+
 
     <div id="footer-container"></div>
 
