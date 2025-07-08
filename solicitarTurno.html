@@ -7,63 +7,68 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <title>Turnos</title>
     <style>
-    .step {
-      display: none;
-    }
-
-    .step.active {
-      display: block;
-    }
-
-    .form-container {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      font-family: Arial;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    .buttons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    h2 {
-      color: black;
-    }
-
-    label {
-      display: block;
-      margin: 10px 0 5px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 15px;
-    }
-    #progresoPasos .nav-link {
-  border-radius: 50px;
-  background-color: #ccc;
-  color: #333;
-}
-#progresoPasos .nav-link.active {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
-input.is-invalid, select.is-invalid {
-  border-color: #dc3545;
-}
-.invalid-feedback {
-  display: block;
-  font-size: 0.9em;
-  color: #dc3545;
-}
-
-  </style>
+        .step {
+            display: none;
+        }
+        
+        .step.active {
+            display: block;
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            font-family: Arial;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        h2 {
+            color: black;
+        }
+        
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+        
+        #progresoPasos .nav-link {
+            border-radius: 50px;
+            background-color: #ccc;
+            color: #333;
+        }
+        
+        #progresoPasos .nav-link.active {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+        
+        input.is-invalid,
+        select.is-invalid {
+            border-color: #dc3545;
+        }
+        
+        .invalid-feedback {
+            display: block;
+            font-size: 0.9em;
+            color: #dc3545;
+        }
+    </style>
 
 </head>
 
@@ -72,95 +77,95 @@ input.is-invalid, select.is-invalid {
     <div id="navbar-container"></div>
     <h1></h1>
     <ul id="progresoPasos" class="nav nav-pills justify-content-center mb-4">
-  <li class="nav-item"><span class="nav-link" id="pasoIndicador1">Paso 1</span></li>
-  <li class="nav-item"><span class="nav-link" id="pasoIndicador2">Paso 2</span></li>
-  <li class="nav-item"><span class="nav-link" id="pasoIndicador3">Paso 3</span></li>
-  <li class="nav-item"><span class="nav-link" id="pasoIndicador4">Confirmación</span></li>
-</ul>
-   
-  <div class="container my-5" id="formulario">
-    <form id="turnoForm" class="p-4 rounded shadow bg-light">
-      <!-- Paso 1 -->
-      <div class="step active" id="step1">
-        <h2 class="mb-4">Ingresa tus datos personales</h2>
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" id="nombre" class="form-control" required />
-        </div>
-        <div class="mb-3">
-          <label for="apellido" class="form-label">Apellido</label>
-          <input type="text" id="apellido" class="form-control" required />
-        </div>
-        <div class="mb-3">
-          <label for="celular" class="form-label">Celular</label>
-          <input type="tel" id="celular" class="form-control" required pattern="[0-9]{8,15}" />
+        <li class="nav-item"><span class="nav-link" id="pasoIndicador1">Paso 1</span></li>
+        <li class="nav-item"><span class="nav-link" id="pasoIndicador2">Paso 2</span></li>
+        <li class="nav-item"><span class="nav-link" id="pasoIndicador3">Paso 3</span></li>
+        <li class="nav-item"><span class="nav-link" id="pasoIndicador4">Confirmación</span></li>
+    </ul>
 
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" class="form-control" required />
-          
-        </div>
-        
-      </div>
+    <div class="container my-5" id="formulario">
+        <form id="turnoForm" class="p-4 rounded shadow bg-light">
+            <!-- Paso 1 -->
+            <div class="step active" id="step1">
+                <h2 class="mb-4">Ingresa tus datos personales</h2>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="nombre" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" id="apellido" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label for="celular" class="form-label">Celular</label>
+                    <input type="tel" id="celular" class="form-control" required pattern="[0-9]{8,15}" />
 
-      <!-- Paso 2 -->
-      <div class="step" id="step2">
-        <h2 class="mb-4">Paso 2: Profesional</h2>
-        <div class="mb-3">
-          <label for="profesional" class="form-label">Seleccioná Profesional</label>
-          <select id="profesional" class="form-select" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" required />
+
+                </div>
+
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="step" id="step2">
+                <h2 class="mb-4">Paso 2: Profesional</h2>
+                <div class="mb-3">
+                    <label for="profesional" class="form-label">Seleccioná Profesional</label>
+                    <select id="profesional" class="form-select" required>
             <option value="">Seleccionar...</option>
             <option value="JP">Juan Pérez</option>
             <option value="HV">Hernán Valdez</option>
             <option value="CS">Camila Suárez</option>
           </select>
-        </div>
-      </div>
+                </div>
+            </div>
 
-      <!-- Paso 3 -->
-      <div class="step" id="step3">
-        <h2 class="mb-4">Selecciona fecha y horario de atención</h2>
-        <div class="mb-3">
-          <label for="fecha" class="form-label">Fecha</label>
-          <input type="date" id="fecha" class="form-control" required onchange="generarHorarios()" />
-          <div class="invalid-feedback">Elegí una fecha a partir de hoy</div>
-        </div>
-        <div class="mb-3">
-          <label for="horario" class="form-label">Horario</label>
-          <select id="horario" class="form-select" required>
+            <!-- Paso 3 -->
+            <div class="step" id="step3">
+                <h2 class="mb-4">Selecciona fecha y horario de atención</h2>
+                <div class="mb-3">
+                    <label for="fecha" class="form-label">Fecha</label>
+                    <input type="date" id="fecha" class="form-control" required onchange="generarHorarios()" />
+                    <div class="invalid-feedback">Elegí una fecha a partir de hoy</div>
+                </div>
+                <div class="mb-3">
+                    <label for="horario" class="form-label">Horario</label>
+                    <select id="horario" class="form-select" required>
             <option value="">Seleccionar horario...</option>
           </select>
-        </div>
-      </div>
-      
+                </div>
+            </div>
 
 
-      <!-- Paso 4 -->
-      <div class="step" id="step4">
-        <h2 class="mb-4">Paso 4: Confirmación</h2>
-        <div id="resumen" class="mb-4"></div>
-        <button type="submit" id="confirmarBtn" class="btn btn-success">Confirmar Turno</button>
-      </div>
 
-      <div class="d-flex justify-content-between mt-4 buttons">
-        <button type="button" class="btn btn-secondary" onclick="changeStep(-1)">Atrás</button>
-        <button type="button" id="btnSiguiente" class="btn btn-primary" onclick="changeStep(1)">Siguiente</button>
-      </div>
-    </form>
-  </div>
+            <!-- Paso 4 -->
+            <div class="step" id="step4">
+                <h2 class="mb-4">Paso 4: Confirmación</h2>
+                <div id="resumen" class="mb-4"></div>
+                <button type="submit" id="confirmarBtn" class="btn btn-success">Confirmar Turno</button>
+            </div>
 
-  <div class="container my-5 text-center" id="pantallaFinal" style="display: none">
-    <div class="p-4 bg-success text-white rounded shadow">
-      <h2>✅ Turno confirmado</h2>
-      <p id="detalleFinal" class="mt-3 fs-5"></p>
-      <button class="btn btn-light mt-4" onclick="location.reload()">Agendar otro turno</button>
+            <div class="d-flex justify-content-between mt-4 buttons">
+                <button type="button" class="btn btn-secondary" onclick="changeStep(-1)">Atrás</button>
+                <button type="button" id="btnSiguiente" class="btn btn-primary" onclick="changeStep(1)">Siguiente</button>
+            </div>
+        </form>
     </div>
-  </div>
+
+    <div class="container my-5 text-center" id="pantallaFinal" style="display: none">
+        <div class="p-4 bg-success text-white rounded shadow">
+            <h2>✅ Turno confirmado</h2>
+            <p id="detalleFinal" class="mt-3 fs-5"></p>
+            <button class="btn btn-light mt-4" onclick="location.reload()">Agendar otro turno</button>
+        </div>
+    </div>
 
 
 
-   
+
 
     <div id="footer-container"></div>
 
