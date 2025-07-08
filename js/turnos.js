@@ -23,20 +23,25 @@ function changeStep(n) {
 
 function generarHorarios() {
   const horarioSelect = document.getElementById("horario");
-  horarioSelect.innerHTML = '<option value="">Seleccionar horario...</option>';
+  horarioSelect.innerHTML = '<option value="">Seleccionar horario...</option>'; // Limpia
 
   const horarios = new Set();
+
   while (horarios.size < 6) {
-    const hora = 9 + Math.floor(Math.random() * 10);
-    const minuto = [0, 15, 30][Math.floor(Math.random() * 4)];
-    horarios.add(`${hora.toString().padStart(2, '0')}:${minuto.toString().padStart(2, '0')}`);
+    const hora = 9 + Math.floor(Math.random() * 10); // Horas entre 9 y 18
+    const minuto = [0, 15, 30, 0][Math.floor(Math.random() * 4)];
+    const nuevoHorario = `${hora.toString().padStart(2, '0')}:${minuto.toString().padStart(2, '0')}`;
+    horarios.add(nuevoHorario);
   }
+
   horarios.forEach(h => {
     const option = document.createElement("option");
     option.value = h;
     option.textContent = h;
     horarioSelect.appendChild(option);
   });
+
+  console.log("Horarios generados:", Array.from(horarios));
 }
 
 function mostrarResumen() {
@@ -122,7 +127,20 @@ function changeStep(n) {
         esValido = false;
         return;
       }
-    }
+    } 
+/*
+    // Validación especial: FECHA (solo fechas igual o posteriores a hoy)
+    if (campo.id === "fecha") {
+      const hoy = new Date();
+      hoy.setHours(0, 0, 0, 0); // Comparación solo de fecha
+      const seleccionada = new Date(campo.value);
+      if (seleccionada < hoy) {
+        campo.classList.add("is-invalid");
+        esValido = false;
+        return;
+      }
+    }*/
+
 
     // Validación estándar
     if (!campo.value) {
