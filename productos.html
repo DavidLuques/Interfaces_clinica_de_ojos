@@ -12,7 +12,135 @@
 
 <body>
     <div id="navbar-container"></div>
-    <h1></h1>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!-- INICIO DE BARRA LATERAL -->
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
+                    <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline text-black">Filtros</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
+                                <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Tipo de Anteojos</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_1" value="AnteojosSol">
+                                        <label class="form-check-label" for="radioSubmenu1_1">
+                                            Anteojos de Sol
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_2" value="AnteojosCAum">
+                                        <label class="form-check-label" for="radioSubmenu1_2">
+                                            Anteojos con aumento
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_3" value="AnteojosSAum">
+                                        <label class="form-check-label" for="radioSubmenu1_3">
+                                            Anteojos sin aumento
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_4" value="LentesContacto">
+                                        <label class="form-check-label" for="radioSubmenu1_4">
+                                            Lentes de Contacto
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
+                                <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Tipo de Marco</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_1" value="ArmAviador">
+                                        <label class="form-check-label" for="radioSubmenu2_1">
+                                            Aviador
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_2" value="ArmBrowline">
+                                        <label class="form-check-label" for="radioSubmenu2_2">
+                                            Browline
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_3" value="ArmCat">
+                                        <label class="form-check-label" for="radioSubmenu2_3">
+                                            Cat eye
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_4" value="ArmGeo">
+                                        <label class="form-check-label" for="radioSubmenu2_4">
+                                            Geometrico
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_5" value="ArmOval">
+                                        <label class="form-check-label" for="radioSubmenu2_5">
+                                            Ovalado
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_6" value="ArmRectang">
+                                        <label class="form-check-label" for="radioSubmenu2_6">
+                                            Rectangular
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_7" value="ArmCircul">
+                                        <label class="form-check-label" for="radioSubmenu2_7">
+                                            Circular
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_8" value="ArmCuadr">
+                                        <label class="form-check-label" for="radioSubmenu2_8">
+                                            Cuadrado
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
+                                <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Precio</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="simbolMoney1">
+                                            <i class="bi bi-currency-dollar"></i> 
+                                        </span> 
+                                        <input class="form-control" type="number" placeholder="Desde" id="inputSubmenu3_1" min="0">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="simbolMoney2">
+                                            <i class="bi bi-currency-dollar"></i> 
+                                        </span> 
+                                        <input class="form-control" type="number" placeholder="Hasta" id="inputSubmenu3_2" min="0">
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!-- FIN DE BARRA LATERAL -->
+            <!-- INICIO DE BODY -->
+            <div class="col py-3">
+                OTRO CONTENIDO VA AQUI
+            </div>
+            <!-- FIN DE BODY -->
+        </div>
+    </div>
     <div id="footer-container"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
