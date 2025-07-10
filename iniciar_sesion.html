@@ -1,23 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <title>Iniciando sesion</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <title>Iniciar sesión | Clínica de Ojos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .login-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .login-image {
+            position: relative;
+            background: url('img/imagenInicio.jpg') no-repeat center center;
+            background-size: cover;
+            flex: 1;
+        }
+        .login-image::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* overlay oscuro */
+        }
+        .login-form {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 40px;
+        }
+        .form-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+    </style>
 </head>
+<body class="d-flex flex-column min-vh-100">
 
-<body>
-    <div id="navbar-container"></div>
-    <h1></h1>
-    <div id="footer-container"></div>
+    <div class="login-container flex-grow-1">
+        <div class="login-image d-none d-md-block"></div>
+        <div class="login-form">
+            <div class="form-box">
+                <h2 class="text-center mb-4">Iniciar sesión</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Usuario o Email</label>
+                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario o email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Recordar usuario</label>
+                    </div>
+                    <div class="mb-3 text-end">
+                        <a href="#" class="link-secondary text-decoration-none">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-secondary">Iniciar sesión</button>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <a href="registrarme.html" class="link-secondary text-decoration-none">¿No tienes cuenta? Registrarme</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <script src="./js/functions.js">
-    </script>
+    <footer>
+        <p class="mb-1">© Clínica de Ojos</p>
+        <p class="mb-0">
+            <a href="#" class="text-white text-decoration-none me-3">Inicio</a>
+            <a href="#" class="text-white text-decoration-none me-3">Contacto</a>
+            <a href="#" class="text-white text-decoration-none">Política de Privacidad</a>
+        </p>
+    </footer>
 
 </body>
 
