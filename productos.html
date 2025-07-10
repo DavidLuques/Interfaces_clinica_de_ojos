@@ -8,252 +8,242 @@
     <title>Productos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div id="navbar-container"></div>
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <!-- INICIO DE BARRA LATERAL -->
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
-                    <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline text-black">Filtros</span>
-                    </a>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                        <li>
-                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
-                                <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Tipo de Anteojos</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_1" value="AnteojosSol">
-                                        <label class="form-check-label" for="radioSubmenu1_1">
+    <main class="flex-fill">
+        <div class="container-fluid">
+            <div class="row ">
+                <!-- INICIO DE BARRA LATERAL -->
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 d-none d-md-block">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
+                        <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline text-black">Filtros</span>
+                        </a>
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                            <li>
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
+                                    <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Tipo de Anteojos</span> </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_1" value="AnteojosSol">
+                                            <label class="form-check-label" for="radioSubmenu1_1">
                                             Anteojos de Sol
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_2" value="AnteojosCAum">
-                                        <label class="form-check-label" for="radioSubmenu1_2">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_2" value="AnteojosCAum">
+                                            <label class="form-check-label" for="radioSubmenu1_2">
                                             Anteojos con aumento
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_3" value="AnteojosSAum">
-                                        <label class="form-check-label" for="radioSubmenu1_3">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_3" value="AnteojosSAum">
+                                            <label class="form-check-label" for="radioSubmenu1_3">
                                             Anteojos sin aumento
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_4" value="LentesContacto">
-                                        <label class="form-check-label" for="radioSubmenu1_4">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu1" id="radioSubmenu1_4" value="LentesContacto">
+                                            <label class="form-check-label" for="radioSubmenu1_4">
                                             Lentes de Contacto
                                         </label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
-                                <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Tipo de Marco</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_1" value="ArmAviador">
-                                        <label class="form-check-label" for="radioSubmenu2_1">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
+                                    <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Tipo de Marco</span> </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_1" value="ArmAviador">
+                                            <label class="form-check-label" for="radioSubmenu2_1">
                                             Aviador
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_2" value="ArmBrowline">
-                                        <label class="form-check-label" for="radioSubmenu2_2">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_2" value="ArmBrowline">
+                                            <label class="form-check-label" for="radioSubmenu2_2">
                                             Browline
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_3" value="ArmCat">
-                                        <label class="form-check-label" for="radioSubmenu2_3">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_3" value="ArmCat">
+                                            <label class="form-check-label" for="radioSubmenu2_3">
                                             Cat eye
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_4" value="ArmGeo">
-                                        <label class="form-check-label" for="radioSubmenu2_4">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_4" value="ArmGeo">
+                                            <label class="form-check-label" for="radioSubmenu2_4">
                                             Geometrico
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_5" value="ArmOval">
-                                        <label class="form-check-label" for="radioSubmenu2_5">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_5" value="ArmOval">
+                                            <label class="form-check-label" for="radioSubmenu2_5">
                                             Ovalado
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_6" value="ArmRectang">
-                                        <label class="form-check-label" for="radioSubmenu2_6">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_6" value="ArmRectang">
+                                            <label class="form-check-label" for="radioSubmenu2_6">
                                             Rectangular
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_7" value="ArmCircul">
-                                        <label class="form-check-label" for="radioSubmenu2_7">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_7" value="ArmCircul">
+                                            <label class="form-check-label" for="radioSubmenu2_7">
                                             Circular
                                         </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_8" value="ArmCuadr">
-                                        <label class="form-check-label" for="radioSubmenu2_8">
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioSubmenu2" id="radioSubmenu2_8" value="ArmCuadr">
+                                            <label class="form-check-label" for="radioSubmenu2_8">
                                             Cuadrado
                                         </label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
-                                <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Precio</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="simbolMoney1">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-black">
+                                    <i class="bi bi-plus"></i> <span class="ms-1 d-none d-sm-inline">Precio</span> </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="simbolMoney1">
                                             <i class="bi bi-currency-dollar"></i> 
-                                        </span> 
-                                        <input class="form-control" type="number" placeholder="Desde" id="inputSubmenu3_1" min="0">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="simbolMoney2">
+                                        </span>
+                                            <input class="form-control" type="number" placeholder="Desde" id="inputSubmenu3_1" min="0">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="simbolMoney2">
                                             <i class="bi bi-currency-dollar"></i> 
-                                        </span> 
-                                        <input class="form-control" type="number" placeholder="Hasta" id="inputSubmenu3_2" min="0">
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        
-                    </ul>
+                                        </span>
+                                            <input class="form-control" type="number" placeholder="Hasta" id="inputSubmenu3_2" min="0">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <!-- FIN DE BARRA LATERAL -->
-            <!-- INICIO DE BODY -->
-            <div class="col py-3">
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card product-card h-100">
-                            <img
-                                src="./img/img_anteojo_11.png"
-                                class="img-fluid"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">$ 111.111</h4>
-                                <p class="card-text">Producto 1</p>
-                                <div class="d-grid gap-2">
-                                    <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
-                                    <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                <!-- FIN DE BARRA LATERAL -->
+                <!-- INICIO DE BODY -->
+                <div class="col py-3">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <img src="./img/img_anteojo_11.png" class="img-fluid" />
+                                <div class="card-body">
+                                    <h4 class="card-title">$ 111.111</h4>
+                                    <p class="card-text">Producto 1</p>
+                                    <div class="d-grid gap-2">
+                                        <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
+                                        <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card product-card h-100">
-                            <img
-                                src="./img/img_anteojo_21.png"
-                                class="img-fluid"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">$ 111.111</h4>
-                                <p class="card-text">Producto 2</p>
-                                <div class="d-grid gap-2">
-                                    <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
-                                    <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <img src="./img/img_anteojo_21.png" class="img-fluid" />
+                                <div class="card-body">
+                                    <h4 class="card-title">$ 111.111</h4>
+                                    <p class="card-text">Producto 2</p>
+                                    <div class="d-grid gap-2">
+                                        <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
+                                        <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card product-card h-100">
-                            <img
-                                src="./img/img_anteojo_31.png"
-                                class="img-fluid"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">$ 111.111</h4>
-                                <p class="card-text">Producto 3</p>
-                                <div class="d-grid gap-2">
-                                    <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
-                                    <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <img src="./img/img_anteojo_31.png" class="img-fluid" />
+                                <div class="card-body">
+                                    <h4 class="card-title">$ 111.111</h4>
+                                    <p class="card-text">Producto 3</p>
+                                    <div class="d-grid gap-2">
+                                        <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
+                                        <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card product-card h-100">
-                            <img
-                                src="./img/img_anteojo_41.png"
-                                class="img-fluid"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">$ 111.111</h4>
-                                <p class="card-text">Producto 4</p>
-                                <div class="d-grid gap-2">
-                                    <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
-                                    <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <img src="./img/img_anteojo_41.png" class="img-fluid" />
+                                <div class="card-body">
+                                    <h4 class="card-title">$ 111.111</h4>
+                                    <p class="card-text">Producto 4</p>
+                                    <div class="d-grid gap-2">
+                                        <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
+                                        <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card product-card h-100">
-                            <img
-                                src="./img/img_anteojo_51.png"
-                                class="img-fluid"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">$ 111.111</h4>
-                                <p class="card-text">Producto 5</p>
-                                <div class="d-grid gap-2">
-                                    <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
-                                    <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <img src="./img/img_anteojo_51.png" class="img-fluid" />
+                                <div class="card-body">
+                                    <h4 class="card-title">$ 111.111</h4>
+                                    <p class="card-text">Producto 5</p>
+                                    <div class="d-grid gap-2">
+                                        <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
+                                        <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card product-card h-100">
-                            <img
-                                src="./img/img_anteojo_61.png"
-                                class="img-fluid"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">$ 111.111</h4>
-                                <p class="card-text">Producto 6</p>
-                                <div class="d-grid gap-2">
-                                    <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
-                                    <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <img src="./img/img_anteojo_61.png" class="img-fluid" />
+                                <div class="card-body">
+                                    <h4 class="card-title">$ 111.111</h4>
+                                    <p class="card-text">Producto 6</p>
+                                    <div class="d-grid gap-2">
+                                        <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
+                                        <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card product-card h-100">
-                            <img
-                                src="./img/img_anteojo_71.png"
-                                class="img-fluid"
-                            />
-                            <div class="card-body">
-                                <h4 class="card-title">$ 111.111</h4>
-                                <p class="card-text">Producto 7</p>
-                                <div class="d-grid gap-2">
-                                    <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
-                                    <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <img src="./img/img_anteojo_71.png" class="img-fluid" />
+                                <div class="card-body">
+                                    <h4 class="card-title">$ 111.111</h4>
+                                    <p class="card-text">Producto 7</p>
+                                    <div class="d-grid gap-2">
+                                        <a href="productos_compra.html" class="btn btn-outline-primary">Comprar</a>
+                                        <a href="productos_detalles.html" class="btn btn-secondary">Mas detalles</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- FIN DE BODY -->
             </div>
-            <!-- FIN DE BODY -->
         </div>
-    </div>
+    </main>
     <div id="footer-container"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
